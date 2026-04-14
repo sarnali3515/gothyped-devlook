@@ -1,8 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function HypeSection() {
     const [active, setActive] = useState(null);
+    const [rotations, setRotations] = useState([]);
+
 
     const cards = [
         { type: "blue", title: "10M+", text: "Organische views", subtext: "Groei door slimme content" },
@@ -10,6 +12,13 @@ export default function HypeSection() {
         { type: "green", title: "30+", text: "Merken geholpen", subtext: "Van start-up tot multinational" },
         { type: "video2" },
     ];
+
+    useEffect(() => {
+        const randomAngles = cards.map(() => (Math.random() * 20 - 10));
+        // -10deg to +10deg
+        setRotations(randomAngles);
+    }, []);
+
 
     return (
         <section className="bg-[#faf4ec] py-24 px-3 sm:px-6 md:px-16 overflow-hidden">
@@ -44,38 +53,44 @@ export default function HypeSection() {
                             <div
                                 key={i}
                                 onMouseEnter={() => setActive(i)}
-                                onMouseLeave={() => setActive(null)}
+                                // onMouseLeave={() => setActive(null)}
+                                onMouseLeave={() => {
+                                    const randomAngle = Math.random() * 20 - 10; // -10 to +10
+
+                                    setRotations((prev) => {
+                                        const updated = [...prev];
+                                        updated[i] = randomAngle;
+                                        return updated;
+                                    });
+
+                                    setActive(null);
+                                }}
                                 className={`
-                relative w-[250px] md:w-[420px] xl:w-[430]
-                h-[250px] md:h-[520px] xl:h-[560px]
-                rounded-xl lg:rounded-[50px] overflow-hidden
-                transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
+        relative w-[250px] md:w-[420px] xl:w-[430]
+        h-[250px] md:h-[520px] xl:h-[560px]
+        rounded-xl lg:rounded-[50px] overflow-hidden
+        transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
 
-                ${i !== 0 ? "-ml-10 sm:-ml-24" : ""}
+        ${i !== 0 ? "-ml-10 sm:-ml-10" : ""}
 
-                ${!isActive && i === 0 ? "rotate-3 sm:rotate-6" : ""}
-                ${!isActive && i === 1 ? "-rotate-3 sm:-rotate-6" : ""}
-                ${!isActive && i === 2 ? "rotate-6" : ""}
-                ${!isActive && i === 3 ? "-rotate-6" : ""}
+        ${i === 0 ? "z-40 sm:z-10" : ""}
+        ${active === i ? "z-50" : "z-10"}
 
-                ${i === 0 ? "z-40 sm:z-10" : ""}
-                ${isActive ? "z-50" : "z-10"}
-
-                /* RESPONSIVE CONTROL */
-                ${i > 1 ? "hidden sm:block" : ""}
-                ${i > 2 ? "sm:hidden md:block" : ""}
-            `}
+        ${i > 1 ? "hidden sm:block" : ""}
+        ${i > 2 ? "sm:hidden md:block" : ""}
+    `}
                                 style={{
                                     transform:
                                         active !== null
-                                            ? isActive
+                                            ? active === i
                                                 ? "scale(1.1) rotate(0deg)"
-                                                : i < active
-                                                    ? `translateX(-170px)`
+                                                : `${i < active
+                                                    ? "translateX(-170px)"
                                                     : i > active
-                                                        ? `translateX(170px)`
+                                                        ? "translateX(170px)"
                                                         : ""
-                                            : "",
+                                                } rotate(${rotations[i]}deg)`
+                                            : `rotate(${rotations[i]}deg)`
                                 }}
                             >
 
