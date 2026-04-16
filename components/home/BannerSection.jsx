@@ -34,7 +34,7 @@ export default function HypeSection() {
                     </h1>
 
                     {/* Desktop version */}
-                    <h1 className="hidden sm:block text-5xl md:text-6xl lg:text-7xl xl:text-[100px] 2xl:text-[120px] font-bold leading-tight">
+                    <h1 className="hidden sm:block text-5xl md:text-6xl lg:text-7xl xl:text-[100px] 2xl:text-[120px] font-semibold tracking-tighter">
                         Get Hyped. Get <br /> Noticed. Get Results.
                     </h1>
                     <p className="text-lg sm:text-2xl font-bold mt-5">Klaar met gokken op content <br />

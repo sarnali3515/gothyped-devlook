@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
 
 const cards = [
@@ -29,6 +29,17 @@ const cards = [
 
 export default function ExampleSection() {
     const refs = useRef([]);
+
+    const [isMobile, setIsMobile] = useState(false);
+    const [activeIndex, setActiveIndex] = useState(null);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
+
 
     const handleMouseEnter = (index) => {
         const video = refs.current[index];
@@ -72,26 +83,49 @@ export default function ExampleSection() {
                     {cards.map((card, index) => (
                         <div
                             key={card.id}
-                            className={`relative w-full md:w-1/3 border-[6px] md:border-[8px] overflow-hidden transition-transform duration-300 rotate-2 md:rotate-0 hover:-rotate-3
+                            className={`relative group w-full md:w-1/3 border-[6px] md:border-[8px] overflow-hidden transition-transform duration-300 md:rotate-0 hover:-rotate-3
                                 rounded-[40px] cursor-pointer
+                                ${index === 1 ? "-rotate-2" : "rotate-2"}
                                 ${index === 0 ? "md:translate-y-32" : ""}
                                 ${index === 1 ? "md:translate-y-16" : ""}
                                 ${index === 2 ? "md:translate-y-0" : ""}
                             `}
                             style={{ borderColor: card.color }}
-                            onMouseEnter={() => handleMouseEnter(index)}
-                            onMouseLeave={() => handleMouseLeave(index)}
+                            onMouseEnter={() => !isMobile && setActiveIndex(index)}
+                            onMouseLeave={() => !isMobile && setActiveIndex(null)}
                         >
                             {/* Video */}
                             <div className="relative h-[380px] md:h-[580px] w-full">
-                                <video
-                                    ref={(el) => (refs.current[index] = el)}
-                                    src={card.video}
-                                    muted
-                                    loop
-                                    playsInline
-                                    className="w-full h-full object-cover"
-                                />
+                                {isMobile ? (
+                                    // mobile
+                                    <video
+                                        src={card.video}
+                                        muted
+                                        loop
+                                        playsInline
+                                        autoPlay
+                                        preload="metadata"
+                                        className="w-full h-full object-cover"
+                                    />
+                                ) : activeIndex === index ? (
+                                    //Desktop hover 
+                                    <video
+                                        src={card.video}
+                                        muted
+                                        loop
+                                        playsInline
+                                        autoPlay
+                                        preload="none"
+                                        className="w-full h-full object-cover"
+                                    />
+                                ) : (
+                                    // Desktop thumbnail
+                                    <img
+                                        src={`/images/examples/card-${card.id}.avif`}
+                                        alt={card.title}
+                                        className="w-full h-full object-cover"
+                                    />
+                                )}
                             </div>
 
                             {/* Overlay */}
@@ -120,8 +154,16 @@ export default function ExampleSection() {
                             </div>
 
                             {/* Arrow */}
-                            <div className="absolute bottom-[130px] md:bottom-[180px] right-6 bg-white rounded-full p-3 shadow-lg z-20">
-                                <ArrowUpRight className="w-5 h-5 text-black " />
+                            <div className="absolute bottom-[130px] md:bottom-[180px] right-6 bg-white rounded-full p-3 shadow-lg z-20 overflow-hidden">
+                                <div className="relative w-5 h-5">
+
+                                    {/* main arrow */}
+                                    <ArrowUpRight className="w-5 h-5 text-black transition-all duration-500 ease-in-out group-hover:translate-x-8 group-hover:-translate-y-8 opacity-100 group-hover:opacity-0" strokeWidth={2.8} />
+
+                                    {/* incoming arrow */}
+                                    <ArrowUpRight className="w-5 h-5 text-black absolute top-0 left-0 translate-x-[-8px] translate-y-[8px] opacity-0 transition-all duration-500 ease-in-out group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100" strokeWidth={2.8} />
+
+                                </div>
                             </div>
                         </div>
                     ))}
