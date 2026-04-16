@@ -127,7 +127,7 @@ export default function BrandSection() {
                                 <img
                                     src={logo}
                                     alt="brand"
-                                    className="max-w-[120px] md:max-w-[200px] object-contain pointer-events-none"
+                                    className="max-w-[120px] md:max-w-[300px] object-contain pointer-events-none"
                                 />
                             </div>
                         );
