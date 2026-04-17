@@ -21,7 +21,7 @@ export default function HypeSection() {
 
 
     return (
-        <section className="bg-[#faf4ec] py-24 px-3 sm:px-6 md:px-16 overflow-hidden">
+        <section className="bg-[#faf4ec] py-24 lg:pt-28 px-3 sm:px-6 md:px-16 overflow-hidden">
             <div className="max-w-7xl lg:max-w-[1400px] xl:max-w-[1600px] 2xl:max-[2000px] mx-auto">
 
                 {/* Heading */}
@@ -73,8 +73,8 @@ export default function HypeSection() {
 
         ${i !== 0 ? "-ml-10 sm:-ml-10" : ""}
 
-        ${i === 0 ? "z-40 sm:z-10" : ""}
-        ${active === i ? "z-50" : "z-10"}
+        ${i === 0 ? "z-30 sm:z-10" : ""}
+        ${active === i ? "z-40" : "z-10"}
 
         ${i > 1 ? "hidden sm:block" : ""}
         ${i > 2 ? "sm:hidden md:block" : ""}

@@ -4,25 +4,25 @@ export const siteConfig = {
   name: "Get Hyped - Social-first content Agency",
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
+    // {
+    //   label: "Home",
+    //   href: "/",
+    // },
     {
-      label: "Home",
+      label: "Expertises",
       href: "/",
     },
     {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
+      label: "Work",
+      href: "/",
     },
     {
       label: "About",
-      href: "/about",
+      href: "/",
+    },
+    {
+      label: "Contact",
+      href: "/",
     },
   ],
   navMenuItems: [
