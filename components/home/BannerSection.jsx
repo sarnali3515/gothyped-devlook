@@ -22,7 +22,7 @@ export default function HypeSection() {
 
     return (
         <section className="bg-[#faf4ec] py-24 lg:pt-28 px-3 sm:px-6 md:px-16 overflow-hidden">
-            <div className="max-w-7xl lg:max-w-[1400px] xl:max-w-[1600px] 2xl:max-[2000px] mx-auto">
+            <div className="max-w-7xl lg:max-w-[1300px] xl:max-w-[1500px] 2xl:max-w-[2000px] mx-auto">
 
                 {/* Heading */}
                 <div className="mb-16">
@@ -66,8 +66,8 @@ export default function HypeSection() {
                                     setActive(null);
                                 }}
                                 className={`
-        relative w-[250px] md:w-[420px] xl:w-[430]
-        h-[250px] md:h-[520px] xl:h-[560px]
+        relative w-[250px] md:w-[400px] lg:w-[410px] xl:w-[410]
+        h-[250px] md:h-[520px] lg:h-[470px] 2xl:h-[530px]
         rounded-xl lg:rounded-[50px] overflow-hidden
         transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
 

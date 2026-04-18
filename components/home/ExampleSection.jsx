@@ -79,7 +79,7 @@ export default function ExampleSection() {
                 </div>
 
                 {/* Cards */}
-                <div className="flex flex-col md:flex-row gap-8 md:gap-24 pt-8 md:pt-0">
+                <div className="flex flex-col md:flex-row gap-8 lg:gap-14 2xl:gap-24 pt-8 md:pt-0">
                     {cards.map((card, index) => (
                         <div
                             key={card.id}
@@ -95,7 +95,7 @@ export default function ExampleSection() {
                             onMouseLeave={() => !isMobile && setActiveIndex(null)}
                         >
                             {/* Video */}
-                            <div className="relative h-[380px] md:h-[580px] w-full">
+                            <div className="relative h-[380px] lg:h-[500px] 2xl:h-[580px] w-full">
                                 {isMobile ? (
                                     // mobile
                                     <video

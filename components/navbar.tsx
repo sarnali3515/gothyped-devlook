@@ -41,7 +41,7 @@ export const Navbar = () => {
           showNavbar ? "translate-y-0" : "-translate-y-full"
         )}
       >
-        <header className="mx-auto flex h-16 lg:h-20  max-w-7xl lg:max-w-[1400px] xl:max-w-[1600px] 2xl:max-[2000px] items-center justify-between px-6 lg:px-0">
+        <header className="mx-auto flex h-16 lg:h-20  max-w-7xl lg:max-w-[1300px] xl:max-w-[1320px] 2xl:max-w-[1650px] items-center justify-between px-6 lg:px-0">
 
           {/* LEFT: LOGO */}
           <NextLink href="/" className="flex items-center">
@@ -61,7 +61,7 @@ export const Navbar = () => {
           </NextLink>
 
           {/* CENTER MENU (DESKTOP) */}
-          <ul className="hidden lg:flex gap-8 bg-white px-6 py-4 rounded-2xl">
+          <ul className="hidden lg:flex gap-8 bg-white px-4 2xl:px-6 py-2 2xl:py-4 rounded-2xl">
             {siteConfig.navItems.map((item, index) => (
               <li key={index}>
                 <NextLink
@@ -79,7 +79,7 @@ export const Navbar = () => {
 
             {/* DESKTOP GET RESULTS BUTTON */}
             <div className="hidden sm:flex">
-              <Button className="h-12 bg-pink-300 text-black text-lg rounded-xl  flex items-center pr-1.5 gap-3 py-2  font-semibold cursor-pointer transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:skew-x-[8deg] hover:skew-y-[-4deg] hover:scale-x-110 hover:scale-y-105 hover:rounded-lg">
+              <Button className="h-11 2xl:h-12 bg-[#fcb8fa] text-black text-lg rounded-xl  flex items-center pr-1.5 gap-3 py-2  font-semibold cursor-pointer transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:skew-x-[8deg] hover:skew-y-[-4deg] hover:scale-x-110 hover:scale-y-105 hover:rounded-lg">
                 Get Results
                 <span className="w-9 h-9 flex items-center justify-center rounded-lg bg-white">🔥</span>
               </Button>

@@ -59,7 +59,7 @@ export default function ContentSection() {
 
                     {/* Scroll Button */}
                     <div className="hidden md:block">
-                        <button className="w-12 h-12 rounded-xl border border-black flex items-center justify-center text-orange-600 text-xl font-bold overflow-hidden relative group cursor-pointer hover:rounded-lg">
+                        <button className="w-12 h-12 rounded-xl border border-black flex items-center justify-center text-[#fa5424] text-xl font-bold overflow-hidden relative group cursor-pointer hover:rounded-lg">
                             <div className="transform transition-all duration-300 ease-out translate-y-0 group-hover:translate-y-8">
                                 ↓
                             </div>

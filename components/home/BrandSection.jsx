@@ -103,7 +103,7 @@ export default function BrandSection() {
             >
                 <div
                     ref={containerRef}
-                    className="flex w-max gap-2 md:gap-6"
+                    className="flex w-max gap-2 lg:gap-3 2xl:gap-6"
                     style={{
                         transform: `translateX(${translateX}px)`,
                     }}
@@ -115,7 +115,7 @@ export default function BrandSection() {
                         return (
                             <div
                                 key={i}
-                                className="min-w-[120px] md:min-w-[320px] h-[120px] md:h-[320px] flex items-center justify-center bg-[#faf4ec] border border-black/40 rounded-2xl transition-transform duration-500"
+                                className="min-w-[120px] lg:min-w-[220px] 2xl:min-w-[320px] h-[120px] lg:h-[220px] 2xl:h-[320px] flex items-center justify-center bg-[#faf4ec] border border-black/40 rounded-2xl transition-transform duration-500"
                                 style={{
                                     transform: isDragging
                                         ? `rotate(${rotation}deg) translateY(${Math.abs(
@@ -127,7 +127,7 @@ export default function BrandSection() {
                                 <img
                                     src={logo}
                                     alt="brand"
-                                    className="max-w-[120px] md:max-w-[300px] object-contain pointer-events-none"
+                                    className="max-w-[120px] lg:max-w-[220px] 2xl:max-w-[300px] object-contain pointer-events-none"
                                 />
                             </div>
                         );

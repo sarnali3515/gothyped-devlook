@@ -5,10 +5,10 @@ export default function ServiceSection({ title, subtitle, desc, bg, video, numbe
         <section className="section h-screen flex items-center justify-center">
 
             {/* CARD WRAPPER */}
-            <div className={`relative w-full max-w-7xl lg:max-w-[1400px] xl:max-w-[1700px] rounded-3xl md:rounded-[36px] ${bg} h-[calc(100vh-6.5rem)] overflow-hidden`}>
+            <div className={`relative w-full max-w-7xl xl:max-w-[1300px] 2xl:max-w-[1650px] rounded-3xl md:rounded-[36px] ${bg} xl:h-[calc(100vh-2.5rem)] 2xl:h-[calc(100vh-6.5rem)] overflow-hidden`}>
 
                 {/* NUMBER */}
-                <div className="absolute right-4 md:right-10 top-8 md:top-20 text-[40px] md:text-[110px] font-bold text-black/10 select-none leading-none">
+                <div className="absolute right-4 2xl:right-10 top-8 2xl:top-16 text-[40px] xl:text-[80px] 2xl:text-[110px] font-bold text-black/10 select-none leading-none">
                     {number}
                 </div>
 
@@ -26,18 +26,18 @@ export default function ServiceSection({ title, subtitle, desc, bg, video, numbe
                                         Expertise
                                     </span>
 
-                                    <h1 className="text-4xl md:text-6xl lg:text-[120px] font-bold tracking-tighter leading-tight md:whitespace-nowrap">
+                                    <h1 className="text-4xl md:text-6xl xl:text-[90px] 2xl:text-[120px] font-bold tracking-tighter leading-tight md:whitespace-nowrap">
                                         {title}
                                     </h1>
                                 </div>
 
                                 {/* BOTTOM */}
                                 <div className="mt-6 lg:mt-0">
-                                    <p className="text-md md:text-3xl font-bold text-gray-900 mb-4 md:mb-6 tracking-tight">
+                                    <p className="text-md xl:text-2xl 2xl:text-3xl font-bold text-gray-900 mb-4 2xl:mb-6 tracking-tight">
                                         {subtitle}
                                     </p>
 
-                                    <p className="max-w-md text-sm md:text-xl font-semibold text-gray-900 mb-6 tracking-tight">
+                                    <p className="max-w-md text-sm xl:text-lg 2xl:text-xl font-semibold text-gray-900 mb-6 tracking-tight">
                                         {desc}
                                     </p>
 

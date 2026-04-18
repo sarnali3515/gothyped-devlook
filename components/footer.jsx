@@ -34,7 +34,7 @@ export default function Footer() {
                             <CiMail className="text-white w-5 h-5" />
                         </span>
                     </button>
-                    <button className="h-12 bg-orange-500 text-white text-lg rounded-xl  flex items-center px-1.5 gap-3 py-2  font-semibold cursor-pointer transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:skew-x-[8deg] hover:skew-y-[-4deg] hover:scale-x-110 hover:scale-y-105 hover:rounded-lg">
+                    <button className="h-12 bg-[#fa5424] text-white text-lg rounded-xl  flex items-center px-1.5 gap-3 py-2  font-semibold cursor-pointer transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:skew-x-[8deg] hover:skew-y-[-4deg] hover:scale-x-110 hover:scale-y-105 hover:rounded-lg">
                         Get Results
                         <span className="w-9 h-9 flex items-center justify-center rounded-lg bg-white">🔥</span>
                     </button>
@@ -97,7 +97,7 @@ export default function Footer() {
                                 <div className="space-y-8">
                                     <div className="block md:hidden w-full mt-3">
                                         {/* Mobile button only */}
-                                        <button className="h-12 bg-orange-500 text-white text-base rounded-xl  flex items-center px-1.5 gap-3 py-2  font-semibold transition-all duration-300">
+                                        <button className="h-12 bg-[#fa5424] text-white text-base rounded-xl  flex items-center px-1.5 gap-3 py-2  font-semibold transition-all duration-300">
                                             Get Hyped! Neem contact op
                                             <span className="w-9 h-9 flex items-center justify-center rounded-lg bg-white">🔥</span>
                                         </button>
