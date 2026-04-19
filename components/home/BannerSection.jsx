@@ -21,7 +21,7 @@ export default function HypeSection() {
 
 
     return (
-        <section className="bg-[#faf4ec] py-24 lg:pt-28 px-3 sm:px-6 md:px-16 overflow-hidden">
+        <section className="bg-[#faf4ec] py-24 lg:pt-28 xl:pt-40 px-3 sm:px-6 md:px-16 overflow-hidden">
             <div className="max-w-7xl lg:max-w-[1300px] xl:max-w-[1500px] 2xl:max-w-[2000px] mx-auto">
 
                 {/* Heading */}

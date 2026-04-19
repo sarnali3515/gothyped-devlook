@@ -36,7 +36,14 @@ export default function Footer() {
                     </button>
                     <button className="h-12 bg-[#fa5424] text-white text-lg rounded-xl  flex items-center px-1.5 gap-3 py-2  font-semibold cursor-pointer transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:skew-x-[8deg] hover:skew-y-[-4deg] hover:scale-x-110 hover:scale-y-105 hover:rounded-lg">
                         Get Results
-                        <span className="w-9 h-9 flex items-center justify-center rounded-lg bg-white">🔥</span>
+                        <span className="w-9 h-9 flex items-center justify-center rounded-lg bg-white text-[#fa5424]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="55%" viewBox="0 0 20 24" fill="none">
+                                <path d="M17.4906 11.0361C17.1898 10.6437 16.8237 10.3037 16.4837 9.96371C15.6075 9.17906 14.6136 8.61673 13.7766 7.79284C11.8281 5.88352 11.3965 2.73184 12.6389 0.3125C11.3965 0.613283 10.3111 1.29331 9.38256 2.03873C5.99549 4.75886 4.66158 9.55831 6.25704 13.6777C6.30935 13.8085 6.36166 13.9393 6.36166 14.1093C6.36166 14.397 6.16549 14.6585 5.90394 14.7632C5.60316 14.8939 5.2893 14.8155 5.04083 14.6062C4.96661 14.5441 4.90453 14.4687 4.85774 14.3839C3.37998 12.5138 3.14459 9.83294 4.13848 7.68822C1.95453 9.46676 0.764478 12.4746 0.934486 15.3124C1.01295 15.9663 1.09142 16.6202 1.31373 17.274C1.49682 18.0587 1.84991 18.8433 2.24224 19.5365C3.65461 21.7989 6.10011 23.4205 8.72869 23.7474C11.5273 24.1005 14.522 23.5905 16.6667 21.655C19.0599 19.4841 19.8969 16.0055 18.6676 13.0238L18.4976 12.6838C18.223 12.0823 17.4906 11.0361 17.4906 11.0361ZM13.3581 19.2749C12.992 19.5888 12.3904 19.9288 11.9196 20.0596C10.4549 20.5827 8.99024 19.8503 8.12712 18.9872C9.68335 18.621 10.6118 17.4702 10.8865 16.3063C11.1088 15.2601 10.6903 14.397 10.5203 13.39C10.3634 12.4223 10.3895 11.5984 10.7426 10.6961C10.9911 11.193 11.2526 11.6899 11.5665 12.0823C12.5735 13.39 14.1559 13.9654 14.4959 15.744C14.5482 15.9271 14.5743 16.1101 14.5743 16.3063C14.6136 17.3787 14.1428 18.5556 13.3581 19.2749Z" fill="currentColor">
+
+                                </path>
+                            </svg>
+
+                        </span>
                     </button>
                 </div>
             </div>
@@ -99,40 +106,82 @@ export default function Footer() {
                                         {/* Mobile button only */}
                                         <button className="h-12 bg-[#fa5424] text-white text-base rounded-xl  flex items-center px-1.5 gap-3 py-2  font-semibold transition-all duration-300">
                                             Get Hyped! Neem contact op
-                                            <span className="w-9 h-9 flex items-center justify-center rounded-lg bg-white">🔥</span>
+                                            <span className="w-9 h-9 flex items-center justify-center rounded-lg bg-white text-[#fa5424]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 20 24" fill="none">
+                                                    <path d="M17.4906 11.0361C17.1898 10.6437 16.8237 10.3037 16.4837 9.96371C15.6075 9.17906 14.6136 8.61673 13.7766 7.79284C11.8281 5.88352 11.3965 2.73184 12.6389 0.3125C11.3965 0.613283 10.3111 1.29331 9.38256 2.03873C5.99549 4.75886 4.66158 9.55831 6.25704 13.6777C6.30935 13.8085 6.36166 13.9393 6.36166 14.1093C6.36166 14.397 6.16549 14.6585 5.90394 14.7632C5.60316 14.8939 5.2893 14.8155 5.04083 14.6062C4.96661 14.5441 4.90453 14.4687 4.85774 14.3839C3.37998 12.5138 3.14459 9.83294 4.13848 7.68822C1.95453 9.46676 0.764478 12.4746 0.934486 15.3124C1.01295 15.9663 1.09142 16.6202 1.31373 17.274C1.49682 18.0587 1.84991 18.8433 2.24224 19.5365C3.65461 21.7989 6.10011 23.4205 8.72869 23.7474C11.5273 24.1005 14.522 23.5905 16.6667 21.655C19.0599 19.4841 19.8969 16.0055 18.6676 13.0238L18.4976 12.6838C18.223 12.0823 17.4906 11.0361 17.4906 11.0361ZM13.3581 19.2749C12.992 19.5888 12.3904 19.9288 11.9196 20.0596C10.4549 20.5827 8.99024 19.8503 8.12712 18.9872C9.68335 18.621 10.6118 17.4702 10.8865 16.3063C11.1088 15.2601 10.6903 14.397 10.5203 13.39C10.3634 12.4223 10.3895 11.5984 10.7426 10.6961C10.9911 11.193 11.2526 11.6899 11.5665 12.0823C12.5735 13.39 14.1559 13.9654 14.4959 15.744C14.5482 15.9271 14.5743 16.1101 14.5743 16.3063C14.6136 17.3787 14.1428 18.5556 13.3581 19.2749Z" fill="currentColor">
+
+                                                    </path>
+                                                </svg>
+                                            </span>
                                         </button>
                                     </div>
                                     {/* BUTTONS */}
                                     <div className="flex flex-wrap gap-2 justify-start font-semibold lg:font-bold">
-                                        <span className="bg-white px-1.5 lg:px-3 py-1.5 lg:py-2 rounded-xl">Expertises</span>
-                                        <span className="bg-white px-1.5 lg:px-3 py-1.5 lg:py-2 rounded-xl">Work</span>
-                                        <span className="bg-white px-1.5 lg:px-3 py-1.5 lg:py-2 rounded-xl">About</span>
-                                        <span className="bg-white px-1.5 lg:px-3 py-1.5 lg:py-2 rounded-xl">Contact</span>
+                                        {["Expertises", "Work", "About", "Contact"].map((item, idx) => (
+                                            <span
+                                                key={idx}
+                                                className="relative overflow-hidden bg-white px-1.5 lg:px-3 py-1.5 lg:py-2 rounded-xl cursor-pointer group"
+                                                style={{
+                                                    transitionDelay: `${idx * 50}ms`,
+                                                }}
+                                            >
+                                                {/* DEFAULT TEXT */}
+                                                <span className="relative z-10 block transition-all duration-400 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-translate-y-full">
+                                                    {item}
+                                                </span>
+
+                                                {/* HOVER LAYER */}
+                                                <span
+                                                    className="
+          absolute left-0 bottom-0 w-full h-full
+          translate-y-full
+          group-hover:translate-y-0
+          transition-all duration-400 ease-[cubic-bezier(0.34,1.56,0.64,1)]
+          flex flex-col
+        "
+                                                >
+                                                    <span className="h-1/6 w-full bg-orange-400"></span>
+                                                    <span className="h-1/6 w-full bg-orange-600"></span>
+                                                    <span className="h-3/5 w-full bg-black"></span>
+                                                </span>
+
+                                                {/* BLACK LAYER  */}
+                                                <span
+                                                    className="
+          absolute left-0 bottom-0 w-full h-full
+          translate-y-full
+          group-hover:translate-y-0
+          transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]
+          delay-75
+          flex items-center justify-center bg-black text-white
+        "
+                                                >
+                                                    {item}
+                                                </span>
+                                            </span>
+                                        ))}
                                     </div>
 
                                     {/* SOCIAL ICONS */}
                                     <div className="flex gap-5 items-center justify-center md:justify-start">
-
                                         <p className="hidden md:block font-bold text-lg">Follow us</p>
 
                                         <div className="flex gap-3">
-
-                                            <div className="bg-white rounded-full p-3">
+                                            <div className="bg-white rounded-full p-3 cursor-pointer transform transition duration-300 hover:scale-110">
                                                 <FaLinkedinIn className="w-5 h-5" />
                                             </div>
 
-                                            <div className="bg-white rounded-full p-3">
+                                            <div className="bg-white rounded-full p-3 cursor-pointer transform transition duration-300 hover:scale-110">
                                                 <FaTiktok className="w-5 h-5" />
                                             </div>
 
-                                            <div className="bg-white rounded-full p-3">
+                                            <div className="bg-white rounded-full p-3 cursor-pointer transform transition duration-300 hover:scale-110">
                                                 <FaInstagram className="w-5 h-5" />
                                             </div>
 
-                                            <div className="bg-white rounded-full p-3">
+                                            <div className="bg-white rounded-full p-3 cursor-pointer transform transition duration-300 hover:scale-110">
                                                 <FaYoutube className="w-5 h-5" />
                                             </div>
-
                                         </div>
                                     </div>
 

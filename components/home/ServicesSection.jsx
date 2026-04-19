@@ -75,7 +75,7 @@ export default function ServicesSection() {
 
     return (
         <div>
-            <div ref={containerRef} className="mt-16 space-y-0">
+            <div id="service-section" ref={containerRef} className="mt-16 space-y-0">
                 <ServiceSection
                     title="Social strategy"
                     subtitle="Slimme strategie. Sterke start."
